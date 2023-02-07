@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*ek9^=-+gt&mmj7@ku%j05dv(kk0z5b9l8rzqrr3=o3**=y+v9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 # '192.168.5.16', '127.0.0.1', 'localhost', 'd604-182-66-106-34.in.ngrok.io'
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['shoutout.onrender.com']
 
 # Application definition
 
