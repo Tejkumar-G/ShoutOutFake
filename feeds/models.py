@@ -101,7 +101,7 @@ class User(AbstractUser):
     redeemPoint = models.IntegerField(default=0)
     reporter = models.ForeignKey('self', max_length=200, null=True, blank=True, on_delete=models.DO_NOTHING)
     roles = models.ManyToManyField(Role, blank=True)
-    uid = models.BigAutoField(primary_key=True)
+    uid = models.AutoField(primary_key=True)
     workingResources = models.ForeignKey(Resource, null=True, blank=True, on_delete=models.DO_NOTHING,
                                          related_name='workingResources')
 
@@ -147,7 +147,7 @@ class ChallengeMap(models.Model):
     note = models.CharField(max_length=200, null=True)
     status = models.CharField(max_length=200, default='Pending', )
     attachments = models.JSONField(default=list, blank=True, null=True)
-    comments = models.ManyToManyField(Comment, blank=True, null=True)
+    comments = models.ManyToManyField(Comment, blank=True)
     creatorId = models.ForeignKey(User, on_delete=models.DO_NOTHING, primary_key=False, related_name='creatorId_set')
 
 
