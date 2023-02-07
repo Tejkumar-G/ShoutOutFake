@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-*ek9^=-+gt&mmj7@ku%j05dv(kk0z5b9l8rzqrr3=o3**=y+v9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 # '192.168.5.16', '127.0.0.1', 'localhost', 'd604-182-66-106-34.in.ngrok.io'
-ALLOWED_HOSTS = ['shoutout.onrender.com']
+ALLOWED_HOSTS = ['shoutout.onrender.com', '0.0.0.0', 'localhost']
 
 # Application definition
 
@@ -88,15 +88,15 @@ TEMPLATES = [
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+# DATABASES = {
+#     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
