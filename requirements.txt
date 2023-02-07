@@ -1,4 +1,4 @@
-lxml==4.9.2
+
 asgiref==3.5.2
 async-timeout==4.0.2
 channels==4.0.0
