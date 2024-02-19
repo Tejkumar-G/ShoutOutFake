@@ -209,8 +209,6 @@ class SpecialReward(models.Model):
 #                             Role or Designation or Tag or Challenge, on_delete=models.DO_NOTHING, default={},
 
 
-
-
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
